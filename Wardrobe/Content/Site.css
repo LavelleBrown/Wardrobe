@@ -25,8 +25,7 @@ textarea {
 /*Adjusting the page-header height*/
 .page-header {
     background-color: tan;
-    max-height: 200PX;
-    background: url('images/Buster Browns.jpg') no-repeat center center fixed;
+    max-height: 300PX;
     
 }
 .jumbotron{
@@ -34,4 +33,10 @@ textarea {
 }
 .row {
     background-image: url('"~/Content/images/Chuck Taylor Shoe.jpg');
+}
+#navbar-primary-collapse{
+    background-color: beige;
+}
+.container body-content {
+    background-image: url('images/Chuck Taylor Shoe.jpg');
 }

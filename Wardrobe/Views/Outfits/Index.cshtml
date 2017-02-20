@@ -4,7 +4,36 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h>OUTFITS</h>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    
+                    <h3><span class="label label-default">@Html.DisplayNameFor(model => model.Name)</span> &nbsp;@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <h3><span class="label label-default">@Html.DisplayNameFor(model => model.Occasion)</span> &nbsp;@Html.DisplayFor(modelItem => item.Occasion)</h3>
+                    <h3><span class="label label-default">@Html.DisplayNameFor(model => model.Photo)</span> &nbsp;@Html.DisplayFor(modelItem => item.Photo)</h3>
+                    @*<p><a href="#" class="btn btn-primary" role="button">Details</a></p>*@
+                    @*@Html.ActionLink("Details", "Details", new { id = item.ID })*@
+                    @Html.ActionLink("Details", "Details", new { id = item.ShoesID }, new { @class = "btn btn-primary", role = "button" })
+
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+
+
+
+
+
+
+
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -66,7 +95,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.OufitID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OufitID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.OufitID })
         </td>
     </tr>

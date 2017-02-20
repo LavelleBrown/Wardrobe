@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+/*Adjusting the page-header height*/
+.page-header {
+    max-height: 50PX;
+    background: url('images/Buster Browns.jpg');
+}

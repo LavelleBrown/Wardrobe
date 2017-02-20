@@ -4,48 +4,26 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h1>ACCESSORIES</h1>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Photo)
-        </th>
-        <th></th>
-    </tr>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    @Html.ActionLink("Create", "Create", new { id = item.AccessoriesID }, new { @class = "btn btn-primary", role = "button" })
+                    <h3><span class="label label-default">@Html.DisplayNameFor(model => model.Name)</span> &nbsp;@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <h3><span class="label label-default">@Html.DisplayNameFor(model => model.Color)</span> &nbsp;@Html.DisplayFor(modelItem => item.Color)</h3>
+                    <h3><span class="label label-default">@Html.DisplayNameFor(model => model.Occasion)</span> &nbsp;@Html.DisplayFor(modelItem => item.Occasion)</h3>
+                    <h3><span class="label label-default">@Html.DisplayNameFor(model => model.Photo)</span> &nbsp;@Html.DisplayFor(modelItem => item.Photo)</h3>
+                    @*<p><a href="#" class="btn btn-primary" role="button">Details</a></p>*@
+                    @*@Html.ActionLink("Details", "Details", new { id = item.ID })*@
+                    @Html.ActionLink("Details", "Details", new { id = item.AccessoriesID }, new { @class = "btn btn-primary", role = "button" })
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occasion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Photo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AccessoriesID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AccessoriesID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AccessoriesID })
-        </td>
-    </tr>
-}
+                </div>
+            </div>
+        </div>
+    }
 
-</table>
+</div>

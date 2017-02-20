@@ -12,6 +12,10 @@ namespace Wardrobe.Controllers
         {
             return View();
         }
+        public ActionResult AddImage()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {

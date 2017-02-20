@@ -8,30 +8,37 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div class="page-header">
+        <h1 class="header-text"> Lavelle's Wardrobe <small class="logo">A stylist's nightmare</small></h1>
+    </div>
+
+    <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="collapse navbar-collapse" id="navbar-primary-collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href="http://localhost:55112/">Home</a></li>
+                    <li><a href="http://localhost:55112/Tops/Index">Tops</a></li>
+                    <li><a href="http://localhost:55112/Bottoms/Index">Bottoms</a></li>
+                    <li><a href="http://localhost:55112/Shoes/Index">Shoes</a></li>
+                    <li><a href="http://localhost:55112/Accessories/Index">Accessories</a></li>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Lavelle's Wardrobe, Inc.</p>
         </footer>
     </div>
 

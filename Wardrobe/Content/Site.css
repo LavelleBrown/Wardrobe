@@ -24,6 +24,13 @@ textarea {
 }
 /*Adjusting the page-header height*/
 .page-header {
-    max-height: 50PX;
-    background: url('images/Buster Browns.jpg');
+    max-height: 200PX;
+    background: url('images/Buster Browns.jpg') no-repeat center center fixed;
+    
+}
+.jumbotron{
+    background-color: lightblue;
+}
+.row {
+    background-image: url('"~/Content/images/Chuck Taylor Shoe.jpg');
 }
